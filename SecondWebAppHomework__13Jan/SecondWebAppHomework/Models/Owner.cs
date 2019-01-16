@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace SecondWebAppHomework.Models
 {
-    public class Dog : Animals
+    public class Owner
     {
+
+        public string FullName { get; set; }
+
+        [EmailAddress]
+        public string EmailAddress { get; set; }
+
+
 
     }
 }

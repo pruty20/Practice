@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SecondWebAppHomework.Models
 {
-    public class Dog : Animals
+    public class Cat: Animals
     {
+
 
     }
 }
