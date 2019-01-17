@@ -6,8 +6,23 @@ using System.Threading.Tasks;
 
 namespace SecondWebAppHomework.Models
 {
-    public class Dog : Animals
+    public class Dog : Owner, IAnimals
     {
+
+        [Required] // validation
+
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        [MinLength(5)]
+        public string NickName { get; set; }
+
+        public DateTime DateOfBirth { get; set; }
+
+        public int Age { get; set; }
+
+        public int Id { get; set; }
 
     }
 }

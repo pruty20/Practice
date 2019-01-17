@@ -37,7 +37,11 @@ namespace SecondWebAppHomework.Services
                 Id = 1,
                 Age = 30,
                 FirstName = "Cathy",
-                LastName = "Missy"
+                LastName = "Missy",
+                EmailAddress = "gigi@emai.com",
+                FullName = "Marcel Popa"
+                
+                
             });
 
             cats.Add(new Cat()
@@ -45,7 +49,9 @@ namespace SecondWebAppHomework.Services
                 Id = 2,
                 Age = 22,
                 FirstName = "Lilly",
-                LastName = "Caty"
+                LastName = "Caty",
+                EmailAddress = "vasf@gemai.com",
+                FullName = "Adelin Porcusor"
             });
 
             cats.Add(new Cat()
@@ -53,7 +59,9 @@ namespace SecondWebAppHomework.Services
                 Id = 3,
                 Age = 9,
                 FirstName = "Mimi",
-                LastName = "Vivi"
+                LastName = "Vivi",
+                EmailAddress = "costuluta@emai.com",
+                FullName = "Michel Dragnea"
             });
 
             return cats;
@@ -67,6 +75,11 @@ namespace SecondWebAppHomework.Services
         public void AddCat(Cat catToAdd)
         {
             cats.Add(catToAdd);
+        }
+
+        public void RemoveCat(Cat catToRemove)
+        {
+            cats.Remove(catToRemove);
         }
 
     }

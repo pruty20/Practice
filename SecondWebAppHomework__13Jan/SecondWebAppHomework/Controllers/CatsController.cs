@@ -68,6 +68,20 @@ namespace SecondWebAppHomework.Controllers
             
         }
 
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+
+            Cat catToDelete = catRepository.GetCats().Find(x => x.Id == id);
+
+            catRepository.RemoveCat(catToDelete);
+
+            //return RedirectToAction("List");
+
+            return View("List");
+
+        }
+
 
     }
 
