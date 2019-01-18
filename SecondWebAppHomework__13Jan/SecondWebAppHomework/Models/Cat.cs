@@ -23,7 +23,7 @@ namespace SecondWebAppHomework.Models
         [DisplayName("DOB")]
         public DateTime DateOfBirth { get; set; }
 
-        [Required]
+        
         public int Age { get; set; }
 
         public int Id { get; set; }

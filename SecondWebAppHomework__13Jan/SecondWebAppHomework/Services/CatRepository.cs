@@ -41,8 +41,6 @@ namespace SecondWebAppHomework.Services
                 NickName = "Pisi",
                 EmailAddress = "gigi@emai.com",
                 FullName = "Marcel Popa"
-                
-                
             });
 
             cats.Add(new Cat()

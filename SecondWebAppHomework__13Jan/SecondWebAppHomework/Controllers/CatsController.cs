@@ -17,19 +17,19 @@ namespace SecondWebAppHomework.Controllers
             catRepository = CatRepository.Instance;
         }
 
+
         // GET: /Cats/List
         public IActionResult List()
         {
             return View(catRepository.GetCats());
         }
 
+
         // Get: /Cats/Edit?id
         [HttpGet]  // Atribut
         public IActionResult Edit(int id)
         {
             Cat catToEdit = catRepository.GetCats().Find(x => x.Id == id);
-
-
             return View(catToEdit);
         }
 
@@ -40,12 +40,11 @@ namespace SecondWebAppHomework.Controllers
             {
                 var myCat = catRepository.GetCats().Find(x => x.Id == model.Id);
                 TryUpdateModelAsync(myCat);
-
                 return RedirectToAction("List");
             }
-
             return View(model);
         }
+
 
         [HttpGet]
         public IActionResult Create()
@@ -65,33 +64,31 @@ namespace SecondWebAppHomework.Controllers
                 return RedirectToAction("List");
             }
             return View(model);
-
-        }
-
-        [HttpGet]
-        public IActionResult Delete(int id)
-        {
-            var catToDelete = catRepository.GetCats().Find(x => x.Id == id);
-            return View(catToDelete);
-        }
-
-        [HttpPost]
-        public IActionResult Delete(Cat catToDelete)
-        {
-            catRepository.RemoveCat(catToDelete);
-            return RedirectToAction("List");
         }
 
         //[HttpGet]
         //public IActionResult Delete(int id)
         //{
-        //    Cat catToDelete = catRepository.GetCats().Find(x => x.Id == id);
+        //    var catToDelete = catRepository.GetCats().Find(x => x.Id == id);
+        //    return View(catToDelete);
+        //}
 
+        //[HttpPost]
+        //public IActionResult Delete(Cat catToDelete)
+        //{
         //    catRepository.RemoveCat(catToDelete);
+        //    TryUpdateModelAsync(catToDelete);
 
         //    return RedirectToAction("List");
-
         //}
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Cat catToDelete = catRepository.GetCats().Find(x => x.Id == id);
+            catRepository.RemoveCat(catToDelete);
+            return RedirectToAction("List");
+        }
 
 
 

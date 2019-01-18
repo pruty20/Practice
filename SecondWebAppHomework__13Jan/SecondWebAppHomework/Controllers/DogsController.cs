@@ -17,11 +17,13 @@ namespace SecondWebAppHomework.Controllers
             dogRepository = DogRepository.Instance;
         }
 
+
         // GET: /Dogs/List
         public IActionResult List()
         {
             return View(dogRepository.GetDogs());
         }
+
 
         // Get: /Dogs/Edit?id
         [HttpGet]  // Atribut
@@ -44,6 +46,7 @@ namespace SecondWebAppHomework.Controllers
             return View(model);
         }
 
+
         [HttpGet]
         public IActionResult Create()
         {
@@ -62,7 +65,6 @@ namespace SecondWebAppHomework.Controllers
                 return RedirectToAction("List");
             }
             return View(model);
-            
         }
 
 
@@ -74,7 +76,6 @@ namespace SecondWebAppHomework.Controllers
             dogRepository.RemoveCat(dogToDelete);
 
             return RedirectToAction("List");
-
         }
 
 

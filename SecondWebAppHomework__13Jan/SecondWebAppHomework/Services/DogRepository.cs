@@ -13,7 +13,6 @@ namespace SecondWebAppHomework.Services
 
         public DogRepository()
         {
-
         }
 
         public static DogRepository Instance
