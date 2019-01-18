@@ -38,6 +38,7 @@ namespace SecondWebAppHomework.Services
                 Age = 30,
                 FirstName = "Cathy",
                 LastName = "Missy",
+                NickName = "Pisi",
                 EmailAddress = "gigi@emai.com",
                 FullName = "Marcel Popa"
                 
@@ -50,6 +51,7 @@ namespace SecondWebAppHomework.Services
                 Age = 22,
                 FirstName = "Lilly",
                 LastName = "Caty",
+                NickName = "Chisi",
                 EmailAddress = "vasf@gemai.com",
                 FullName = "Adelin Porcusor"
             });

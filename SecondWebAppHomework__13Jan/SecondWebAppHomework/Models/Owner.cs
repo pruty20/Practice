@@ -13,6 +13,7 @@ namespace SecondWebAppHomework.Models
         public string FullName { get; set; }
 
         [EmailAddress]
+        [DisplayName("Email Address")]
         public string EmailAddress { get; set; }
 
 

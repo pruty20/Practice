@@ -71,30 +71,30 @@ namespace SecondWebAppHomework.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            Cat catToDelete = catRepository.GetCats().Find(x => x.Id == id);
-
+            var catToDelete = catRepository.GetCats().Find(x => x.Id == id);
             return View(catToDelete);
         }
 
-
-        [HttpDelete]
-        public IActionResult Delete(Cat model)
+        [HttpPost]
+        public IActionResult Delete(Cat catToDelete)
         {
-
-            if (ModelState.IsValid)
-            {
-                var catToDelete = catRepository.GetCats().Find(x => x.Id == model.Id);
-                TryUpdateModelAsync(catToDelete);
-
-                catRepository.RemoveCat(catToDelete);
-
-                return RedirectToAction("List");
-            }
-
-            return View(model);
-
-
+            catRepository.RemoveCat(catToDelete);
+            return RedirectToAction("List");
         }
+
+        //[HttpGet]
+        //public IActionResult Delete(int id)
+        //{
+        //    Cat catToDelete = catRepository.GetCats().Find(x => x.Id == id);
+
+        //    catRepository.RemoveCat(catToDelete);
+
+        //    return RedirectToAction("List");
+
+        //}
+
+
+
 
 
     }

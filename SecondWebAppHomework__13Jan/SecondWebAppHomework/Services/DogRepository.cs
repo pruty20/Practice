@@ -43,9 +43,11 @@ namespace SecondWebAppHomework.Services
             dogs.Add(new Dog()
             {
                 Id = 2,
-                Age = 22,
-                FirstName = "Gigi",
-                LastName = "Dev"
+                Age = 9,
+                FirstName = "Mimi",
+                LastName = "Vivi",
+                EmailAddress = "costuluta@emai.com",
+                FullName = "Michel Dragnea"
             });
 
             return dogs;
@@ -59,6 +61,11 @@ namespace SecondWebAppHomework.Services
         public void AddDog(Dog dogToAdd)
         {
             dogs.Add(dogToAdd);
+        }
+
+        public void RemoveCat(Dog dogToRemove)
+        {
+            dogs.Remove(dogToRemove);
         }
 
     }

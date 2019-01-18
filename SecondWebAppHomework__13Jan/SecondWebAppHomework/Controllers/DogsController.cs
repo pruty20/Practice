@@ -66,6 +66,18 @@ namespace SecondWebAppHomework.Controllers
         }
 
 
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Dog dogToDelete = dogRepository.GetDogs().Find(x => x.Id == id);
+
+            dogRepository.RemoveCat(dogToDelete);
+
+            return RedirectToAction("List");
+
+        }
+
+
     }
 
 }

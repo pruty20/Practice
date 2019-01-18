@@ -20,6 +20,7 @@ namespace SecondWebAppHomework.Models
 
         DateTime DateOfBirth { get; set; }
 
+        [Required]
         int Age { get; set; }
 
         int Id { get; set; }
