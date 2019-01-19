@@ -41,6 +41,7 @@ namespace SecondWebAppHomework.Controllers
             {
                 var myDog = dogRepository.GetDogs().Find(x => x.Id == model.Id);
                 TryUpdateModelAsync(myDog);
+                return RedirectToAction("List");
             }
 
             return View(model);
